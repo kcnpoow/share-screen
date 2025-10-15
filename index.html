@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Screen Share Stream</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 2em; }
+    video { width: 80%; margin-top: 1em; border: 1px solid #ccc; }
+    textarea { width: 80%; height: 100px; margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Screen Share P2P</h1>
+
+  <button id="share-screen">Поделиться экраном</button>
+  <button id="start-viewer">Я зритель</button>
+
+  <h3>Сигнал (отправь другу):</h3>
+  <textarea id="out"></textarea>
+  <h3>Ответ (вставь от друга):</h3>
+  <textarea id="in"></textarea>
+  <button id="connect">Подключиться</button>
+
+  <video id="video" autoplay playsinline controls></video>
+
+  <script src="https://unpkg.com/simple-peer@latest/simplepeer.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
