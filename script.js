@@ -37,3 +37,10 @@ document.getElementById('connect').onclick = () => {
   const signal = JSON.parse(input.value);
   peer.signal(signal);
 };
+
+video.srcObject = stream;
+video.autoplay = true;
+video.muted = false;
+video.play().catch(err => {
+  console.warn("🎬 Видео не может проигрываться автоматически:", err);
+});
